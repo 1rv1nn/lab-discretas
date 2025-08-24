@@ -3,9 +3,9 @@
 En este repositorio encontrás notas de lenguaje de programación Haskell para el curso de estructuras discretas 2026-1.
 Cada directorio tiene una fecha, dentro del el existe un ejecutable con respectiva documentación. 
 
-Para poder ejecutarlas, entra al directorio de preferencia e ingresa el siguiente comando en tu terminal, donde n es el número de nota.
+Para poder ejecutarlas, entra al directorio de preferencia e ingresa el siguiente comando en tu terminal.
 
-`ghci notan.hs`
+`ghci nota.hs`
 
 No olvides llamar a la función para probarla.
 
