@@ -1,3 +1,5 @@
+module Clase220825.Modulo (cuadrado) where
+
 -- Esto es un comentario de ua sola línea.
 
 {-
