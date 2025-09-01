@@ -55,3 +55,5 @@ persona (nombre, edad, residencia) = nombre ++ " tiene " ++ show edad ++ " y res
 
 age :: ((Int, Int, Int), (Int, Int, Int)) -> Int
 age ((d, m, y), (d1, m2, y1)) = y1 - y
+
+-- Puedes modificar la anterior función para regresar el Uso_dos
