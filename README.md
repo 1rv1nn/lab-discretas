@@ -10,3 +10,8 @@ Para poder ejecutarlas, entra al directorio de preferencia e ingresa el siguient
 No olvides llamar a la función para probarla.
 
 Te invito a que juegues con las funciones, crea una nueva rama nombrandola con la función que quieras y mejorar realiza un `Pull Request`
+
+
+## Bibliografia 
+Miran Lipovača. (2011). Learn You a Haskell for Great Good! A Beginner's Guide. Learn You a Haskell for Great Good!. 
+https://learnyouahaskell.github.io/
