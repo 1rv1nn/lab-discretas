@@ -5,7 +5,15 @@ Ejemplo:
 
 	data Persona = Persona String Int String deriving (Show)
 	
-Podemos ver que nuestro nuevo tipo de dato `Persona` crea un constructor con tres parámetros `String`, `Int` y `String` además tener la palabra resevada `deriving` que automaticamente Haskell hace que ese tipo forme parte de la classType `Show`	
+Podemos ver que nuestro nuevo tipo de dato `Persona` crea un constructor con tres parámetros `String`, `Int` y `String` además tener la palabra resevada `deriving` que automaticamente Haskell hace que ese tipo forme parte de la classType `Show`
+
+Para revisar que tipos de datos o valores suele recibir un a función recuerda hacer el comando:
+	
+	:t nombreFuncion 
+	
+O tambien puedes hacerlo con parentesis
+	
+	:t (nombreFuncion)
 
 ## TypeClass más comunes
  - `Show`: Permite convertir el tipo a String
@@ -32,11 +40,11 @@ Tambien conocido como caza de patrones, es una técnica usada para encontrar pat
 	[expresión | generadores, condiciones]
 	
 Donde 
-	- `expresión` es la transformación que se aplica a cada elemento que cumple las condiciones.
+ - `expresión` es la transformación que se aplica a cada elemento que cumple las condiciones.
 	
-	- `generador` define de dónde proviene los valores y como se iteran
+ - `generador` define de dónde proviene los valores y como se iteran
 	
-	- `condición` Filtra los elementos que satisfacen ciertas propiedad.
+ - `condición` Filtra los elementos que satisfacen ciertas propiedad.
 	
 Ejemplo:	
 	
