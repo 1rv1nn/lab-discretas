@@ -1,19 +1,4 @@
-# Notas de Laboratorio con Haskell
-
-En este repositorio encontrás notas de lenguaje de programación Haskell para el curso de estructuras discretas 2026-1.
-Cada directorio tiene una fecha, dentro del el existe un ejecutable con respectiva documentación.
-
-## Ejecución con GHCi instalado localmente
-
-Para poder ejecutarlas, entra al directorio de preferencia e ingresa el siguiente comando en tu terminal.
-
-`ghci nota.hs`
-
-No olvides llamar a la función para probarla.
-
-Te invito a que juegues con las funciones, crea una nueva rama nombrandola con la función que quieras y mejorar realiza un `Pull Request`
-
-## Ejecución con Docker
+# Ejecución con Docker
 
 También puedes usar Docker para ejecutar Haskell sin necesidad de instalarlo localmente:
 
@@ -48,8 +33,3 @@ También puedes usar Docker para ejecutar Haskell sin necesidad de instalarlo lo
    ```powershell
    docker-compose run --rm haskell ghci Clase050925/nota.hs
    ```
-
-## Bibliografía
-
-Miran Lipovača. (2011). Learn You a Haskell for Great Good! A Beginner's Guide. Learn You a Haskell for Great Good!.
-[https://learnyouahaskell.github.io/](https://learnyouahaskell.github.io/)
