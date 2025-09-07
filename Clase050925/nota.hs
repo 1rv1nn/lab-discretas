@@ -45,7 +45,7 @@ divisores n = [d | d <- [1..n], n `mod` d == 0]
    Uso: DecimalToBinario 10 = 1010
 -}
 
-decimalToBinary :: Int -> Int
+-- decimalToBinary :: Int -> Int
 
 
 
