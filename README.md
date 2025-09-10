@@ -1,35 +1,46 @@
-# Ejecución con Docker
+# Instrucciones para tener GHCi en WSL
 
-También puedes usar Docker para ejecutar Haskell sin necesidad de instalarlo localmente:
+## Requisitos Previos
+Asegúrate de tener instalado Windows Subsystem for Linux (WSL) en tu máquina. Puedes habilitarlo desde las características de Windows.
+o simplemente abrir en windows powerShell y teclear el comando:
 
-1. Asegúrate de tener [Docker](https://www.docker.com/products/docker-desktop/) y [Docker Compose](https://docs.docker.com/compose/install/) instalados.
+   `wsl --install`
 
-2. Construye la imagen de Docker SOLO basta con hacerlo una vez:
+Se te instalará una distribución por defecto (Ubuntu) para acceder a ella:
 
-   ```powershell
-   docker-compose build
+   `wsl -d Ubunt`
+
+y para salir 
+
+   `exit`
+
+## Instalación de GHCi
+
+1. **Abre tu terminal WSL**:
+   - Puedes hacerlo buscando "WSL" en el menú de inicio de Windows.
+
+2. **Actualiza los paquetes**:
+   ```bash
+   sudo apt update
+   sudo apt upgrade
    ```
 
-3. Para iniciar GHCi directamente:
-
-   ```powershell
-   docker-compose run --rm haskell ghci
+3. **Instala GHC y Cabal**:
+   - Para instalar GHCi, primero necesitas instalar GHC (Glasgow Haskell Compiler) y Cabal (el sistema de construcción de Haskell). Ejecuta el siguiente comando:
+   ```bash
+   sudo apt install ghc cabal-install
    ```
 
-4. Para acceder a un shell bash dentro del contenedor y despúes de eso entrar al director de tu interes para ejecutar el comando de siempre (ghci nota.hs):
-
-   ```
-   docker-compose run --rm haskell bash
-   ```
-
-    4.1 Para salir de él
-    ```powershell
-   exit
+4. **Verifica la instalación**:
+   - Una vez completada la instalación, verifica que GHCi esté instalado correctamente ejecutando:
+   ```bash
+   ghci --version
    ```
 
+## Uso de GHCi
 
-5. Para cargar un archivo específico en GHCi:
+- Para iniciar GHCi, simplemente escribe `ghci` en la terminal y presiona Enter.
+- Puedes cargar archivos Haskell usando el comando `:load nombre_del_archivo.hs`.
+- Para salir de GHCi, utiliza el comando `:quit`.
 
-   ```powershell
-   docker-compose run --rm haskell ghci Clase050925/nota.hs
-   ```
+
