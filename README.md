@@ -13,5 +13,7 @@ Te invito a que juegues con las funciones, crea una nueva rama nombrandola con l
 
 
 ## Bibliografia 
-Miran Lipovača. (2011). Learn You a Haskell for Great Good! A Beginner's Guide. Learn You a Haskell for Great Good!. 
+- Miran Lipovača. (2011). Learn You a Haskell for Great Good! A Beginner's Guide. Learn You a Haskell for Great Good!. 
 https://learnyouahaskell.github.io/
+
+- Haskell.org. (2014). Learn Haskell in Y minutes. Learn X in Y Minutes. https://learnxinyminutes.com/docs/haskell/
