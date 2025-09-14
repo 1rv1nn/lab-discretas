@@ -29,7 +29,7 @@ Ejemplo 1:
 Una función recursiva puede ser la definición de potencia:
 
 	x^0 = 1
-	x^(n+1) = x*(x^n)
+	x^(n+1) = x*(x^n-1)
 	
 Estos casos definen x^n para cualquier número natural, si n es cero entonces el primer caso se aplica (la potencia de una base elevada a cero siempre es 1), mientras que si n es diferente que cero o más grande que cero, se aplica la recursion del modo:
 
