@@ -59,7 +59,7 @@ Ordenar una lista vacia, simpre será vacia
   - Se elige el primer elemento (x) como pivote.
   - Se dividen los elementos restantes `(xs`) en dos grupos filtrados por menores y mayores respectivamente al pivote y aplicamos la función recursiva
 
-![quicksort_gif]{quicksort.gif}
+![quicksort_gif]{./quicksort.gif}
 
 
 ## mizip
