@@ -19,7 +19,7 @@ derecho (AB r t1 t2) = t2
  Uso: numNodos (AB 5 ( AB 3 Vacio Vacio) (AB 7 Vacio Vacio)) = 3 
 -}
 
-numNodos :: Arbol Int -> Int
+numNodos :: Arbol a -> Int
 numNodos Vacio = 0
 numNodos (AB r Vacio Vacio) = 1
 numNodos (AB r t1 t2) = 1 + numNodos t1 + numNodos t2
@@ -31,9 +31,4 @@ numNodos (AB r t1 t2) = 1 + numNodos t1 + numNodos t2
  Uso: Inserta inserta 0 Vacio = AB 0 Vacio Vacio
 -}
 
-inserta :: Ord a => a -> Arbol a -> Arbol a
-inserta n Vacio = AB n Vacio Vacio    -- Si el árbol es una hoja vacía, crea un nuevo nodo con el valor n.
-inserta n (AB a izquierda  derecha)   
-  | n == a = AB a izquierda  derecha  -- Regresa el mismo árbol
-  | n < a  = AB a (inserta n izquierda) derecha  --  El elemento a insertar es MENOR que el valor del nodo actual
-  | n > a  = AB a izquierda  (inserta n derecha) 
+ 
