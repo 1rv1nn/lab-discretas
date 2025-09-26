@@ -20,12 +20,40 @@ De igual manera podemos definir un árbol polimorfico/generico de la siguiente m
 Esta estructura tiene un valor de tipo `a` en cada nodo. Cada nodo debe ser un nodo terminal llamado `Vacio` o puede ser una rama que tenga dos subárboles los cuales tambien son de tipo `Arbol a`, así que este tipo es recursivo, es decir cada árbol binario puede almacenar otro árbol binario lo que permite árboles de profundidad arbitraria. 
 
 
-## Ejemplo:
+## Ejemplos
+
+La contrucción de un árbol debe empezarse por el subárbol izquiero. Tenemos los siguientes árboles.
+
+1. 
+``` mermaid
+	graph TD
+    5 --> 3
+	5 --> 7
+```	
+
+Bajo nuestro constructor de dato su representación seria:
+
+	T 5 ( T 3 Vacio Vacio) (T 7 Vacio Vacio)
+
+2.
 
 ``` mermaid
 	graph TD
     5 --> 3
+	5 --> 7
     3 --> 1
-    3 --> 7
-    7 --> 4
+    3 --> 4
 ```	
+
+Bajo nuestro constructor de dato su representación seria:
+
+	T 5 (T 3 (T 1 Vacio Vacio) (T 4 Vacio Vacio)) (T 7 Vacio Vacio)
+
+
+## Funciones
+	
+Llamando a la función `derecho`  basandonos en los ejemplo:
+
+	derecho T 5 ( T 3 Vacio Vacio) (T 7 Vacio Vacio) = T 7 Vacio Vacio
+
+
