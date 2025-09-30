@@ -26,9 +26,9 @@ La contrucción de un árbol debe empezarse por el subárbol izquiero. Tenemos l
 
 1. 
 ``` mermaid
-	graph TD
-    5 --> 3
-	5 --> 7
+	graph TB
+    A((5))-->B((3))
+    A-->C((7))
 ```	
 
 Bajo nuestro constructor de dato su representación seria:
@@ -38,11 +38,11 @@ Bajo nuestro constructor de dato su representación seria:
 2.
 
 ``` mermaid
-	graph TD
-    5 --> 3
-	5 --> 7
-    3 --> 1
-    3 --> 4
+	graph TB
+    A((5))-->B((3))
+    A-->C((7))
+	B-->D((1))
+	B-->E((4))
 ```	
 
 Bajo nuestro constructor de dato su representación seria:
