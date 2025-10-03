@@ -57,3 +57,21 @@ Llamando a la función `derecho`  basandonos en los ejemplo:
 	derecho AB 5 ( AB 3 Vacio Vacio) (AB 7 Vacio Vacio) = AB 7 Vacio Vacio
 
 
+## Árbol Binario de Búsqueda (BST)
+
+Es un árbol con ordenamiento especifico donde cumple que:
+
+- Todos los nodos del subárbol izquierdo son menores que la raiz.
+- Todos los nodos del subábol derecho son mayores que la raiz.
+
+Con estos árboles nos permite hacer búsquedas, inserciones y eliminaciones. 
+
+![BST](bst)
+
+
+## Árbol AVL
+
+Es un BST balanceado autómaticamente, la diferencia de su altura entre subárboles izquierdo y derecho de cualquier nodo es como máximo 1
+
+![BST](balance)
+
