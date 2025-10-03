@@ -66,12 +66,12 @@ Es un árbol con ordenamiento especifico donde cumple que:
 
 Con estos árboles nos permite hacer búsquedas, inserciones y eliminaciones. 
 
-![BST](bst)
+![BST](bst.jpg)
 
 
 ## Árbol AVL
 
 Es un BST balanceado autómaticamente, la diferencia de su altura entre subárboles izquierdo y derecho de cualquier nodo es como máximo 1
 
-![BST](balance)
+![BST](balance.jpg)
 
