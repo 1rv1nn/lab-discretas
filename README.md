@@ -1,8 +1,9 @@
 # Ejecución con Docker
 
-También puedes usar Docker para ejecutar Haskell sin necesidad de instalarlo localmente:
+En este repositorio encontrás notas de lenguaje de programación Haskell para el curso de estructuras discretas 2026-1.
+Cada directorio tiene el nombre del tema central y dentro del el existe un ejecutable con respectiva documentación. 
 
-1. Asegúrate de tener [Docker](https://www.docker.com/products/docker-desktop/) y [Docker Compose](https://docs.docker.com/compose/install/) instalados.
+Para poder ejecutar estas notas, entra al directorio de preferencia e ingresa el siguiente comando en tu terminal.
 
 2. Construye la imagen de Docker SOLO basta con hacerlo una vez:
 
@@ -10,26 +11,11 @@ También puedes usar Docker para ejecutar Haskell sin necesidad de instalarlo lo
    docker-compose build
    ```
 
-3. Para iniciar GHCi directamente:
-
-   ```powershell
-   docker-compose run --rm haskell ghci
-   ```
-
-4. Para acceder a un shell bash dentro del contenedor y despúes de eso entrar al director de tu interes para ejecutar el comando de siempre (ghci nota.hs):
-
-   ```
-   docker-compose run --rm haskell bash
-   ```
-
-    4.1 Para salir de él
-    ```powershell
-   exit
-   ```
+Te invito a que juegues con las funciones, crea una nueva rama nombrandola con la función que quieras mejorar y realiza un `Pull Request`
 
 
-5. Para cargar un archivo específico en GHCi:
+## Bibliografia 
+- Miran Lipovača. (2011). Learn You a Haskell for Great Good! A Beginner's Guide. Learn You a Haskell for Great Good!. 
+https://learnyouahaskell.github.io/
 
-   ```powershell
-   docker-compose run --rm haskell ghci Clase050925/nota.hs
-   ```
+- Haskell.org. (2014). Learn Haskell in Y minutes. Learn X in Y Minutes. https://learnxinyminutes.com/docs/haskell/
