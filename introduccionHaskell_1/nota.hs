@@ -1,5 +1,3 @@
-module Nota (cuadrado) where
-
 -- Esto es un comentario de ua sola línea.
 
 {-
