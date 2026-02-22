@@ -1,7 +1,18 @@
 
 ## Modulos
 
- Reglas para construir un modulo
+Un módulo es una colección de funciones, tipos y clases de tipos relacionados. En un programa Haskell es una colección de módulos donde el módulo principal carga los otros módulos y luego usa las funciones definidas en ellos para hacer algo. Tener el código dividido trae principalmente dos ventajas.
+
+1. Podemos estructurar nuestros scripts en fragmentos pequeños, separando pequeños grupos de funciones relacionadas en modulos separados.
+   
+2. Las funciones en un módulo compilado son mucho más rápidas de evaluar porque sus definiciones se compilan en código específico para la máquina, lo que conduce a un proceso de reducción mucho más eficiente. GHCi es un intérprete más que un compilador; evalúa formas internas de expresión que están mucho más cerca del lenguaje fuente de Haskell.
+
+Puedes leer más sobre modularidad y buenas prácticas en el siguiente enlace:
+
+[Modularidad](https://www.disrupciontecnologica.com/acoplamiento-y-cohesion/)
+
+
+## Reglas para construir un modulo
  
   1. Si quieres modular un archivo
 
@@ -14,12 +25,17 @@
 
   2. Al archivo donde haces llamar al modulo debe tener como encabezado la siguiente instrucción 
     
-        `import NombreDelMOdulo`
+        `import NombreDelModulo`
 
 
- 3. Para ejecutar un archivo modularizado y un archivo en el que importas este modulo en diferentes directorios:
+  3. Para ejecutar un archivo modularizado y un archivo en el que importas este modulo en el **mismo directorio**:
 
-    3.1. En el archivo a modular inserta:
+          ghci nombreArchivo.hs
+
+
+ 1. Para ejecutar un archivo modularizado y un archivo en el que importas este modulo en **diferentes directorios**:
+
+      4.1. En el archivo a modular inserta:
 
     `module NombreDelDirectorio.NombreDelModulo (funciones) where`
 
@@ -27,9 +43,9 @@
 
     `import NombreDelDirectorio.NombreDelModulo`
 
-    3.3. (No funciona) Intepreta ambos archivos desde el directorio actual: 
+    3.3. Intepreta el archivo donde utilizas el modulo desde el directorio actual: 
 
-    `ghci -i ../NombreDirectorioModulo/Modulo.hs archivo.hs`
+    `ghci -i.. nombreArchivo.hs`
 
 
     3.4. O tambien puedes intepretar ambos archivos desde el directorio raiz, con el siguiente comando:
@@ -39,3 +55,12 @@
     En este caso puedes irte al directorio donde se encuentra todas los directorios de las clase y ejecutar el siguiente comando
 	
 	`ghci -iClase220825 Clase290825/nota.hs`
+
+
+
+## Tuplas
+
+Es un tipo de dato compuesto que te permite almacenar y compartir varios valores dentro de un solo valor.
+
+    ("Sal: 1kg", 139) 
+    ("Patatas fritas",25) 
