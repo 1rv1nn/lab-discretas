@@ -7,10 +7,6 @@ Un módulo es una colección de funciones, tipos y clases de tipos relacionados.
    
 2. Las funciones en un módulo compilado son mucho más rápidas de evaluar porque sus definiciones se compilan en código específico para la máquina, lo que conduce a un proceso de reducción mucho más eficiente. GHCi es un intérprete más que un compilador; evalúa formas internas de expresión que están mucho más cerca del lenguaje fuente de Haskell.
 
-Puedes leer más sobre modularidad y buenas prácticas en el siguiente enlace:
-
-[Modularidad](https://www.disrupciontecnologica.com/acoplamiento-y-cohesion/)
-
 
 ## Reglas para construir un modulo
  
@@ -48,19 +44,6 @@ Puedes leer más sobre modularidad y buenas prácticas en el siguiente enlace:
     `ghci -i.. nombreArchivo.hs`
 
 
-    3.4. O tambien puedes intepretar ambos archivos desde el directorio raiz, con el siguiente comando:
-
-    `ghci -iNombreDirectorioModulo NombreDirectorio/archivo.hs`
-  
-    En este caso puedes irte al directorio donde se encuentra todas los directorios de las clase y ejecutar el siguiente comando
+    3.4. En este caso puedes puedes posicionarte desde el directorio actual y ejecutar. Verás que se cargan ambos modulos
 	
-	`ghci -iClase220825 Clase290825/nota.hs`
-
-
-
-## Tuplas
-
-Es un tipo de dato compuesto que te permite almacenar y compartir varios valores dentro de un solo valor.
-
-    ("Sal: 1kg", 139) 
-    ("Patatas fritas",25) 
+	  `ghci -i..  nota.hs`
