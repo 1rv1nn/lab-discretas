@@ -1,8 +1,15 @@
 data Persona = Persona String Int String deriving (Show)
-
+data TipoDia = Laboral | FinDeSemana deriving (Show)
 
 hombrecillx :: Persona -> String
 hombrecillx (Persona nombre edad residencia) = nombre ++ " tiene " ++ show edad ++ " y reside en " ++ residencia  
+
+-- Función usando Pattern Matching
+esDescanso :: TipoDia -> Bool
+esDescanso FinDeSemana = True
+esDescanso Laboral = False 
+
+
 
 
 -- Lista por Comprensión
@@ -46,7 +53,6 @@ divisores n = [d | d <- [1..n], n `mod` d == 0]
 -}
 
 -- decimalToBinary :: Int -> Int
-
 
 
 
