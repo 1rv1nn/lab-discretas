@@ -1,4 +1,4 @@
-# Nuestros propios tipos y clases de datos 
+# Nuestros propios tipos de datos y clases de tipo 
 Ya hemos hecho uso de los tipo que nos regala haskell , ahora vamos a crear los nuestros
 
 Ejemplo:
