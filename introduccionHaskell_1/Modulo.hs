@@ -1,4 +1,4 @@
-module IntroduccionHaskell_1.Modulo (cuadrado) where
+module Modulo (cuadrado) where
 
 -- Esto es un comentario de ua sola línea.
 

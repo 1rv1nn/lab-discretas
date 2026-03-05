@@ -1,4 +1,4 @@
--- import IntroduccionHaskell_1.Modulo
+--import Modulo (cuadrado)
 import Cuadrado
 
 {- Función: leap
