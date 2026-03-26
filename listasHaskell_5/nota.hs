@@ -79,3 +79,28 @@ mizip :: [a] -> [b] -> [(a,b)]
 mizip [] _ = []
 mizip _ [] = []
 mizip (x:xs) (y:ys) = (x,y): mizip xs ys
+
+
+{-
+  Función: frecuencia, 
+  Descripción: Regresa la frecuencia de una letra de una cadena
+  Uso: frecuencia 'l' "Haskell" = 2
+
+-}
+
+frecuencia :: Char -> String -> Int
+frecuencia c "" = 0
+frecuencia c (x:xs) = 
+  if c == x
+  then 1 + frecuencia c xs
+  else frecuencia c xs 
+
+
+ {- 
+  numElementos: número de elementos de una lista.
+ -} 
+
+numElementos :: [Int] -> Int
+numElementos [] = 0
+numElementos (x:xs) = 1 + numElementos xs
+
