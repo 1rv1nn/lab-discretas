@@ -27,6 +27,36 @@ numNodos (AB r t1 t2) = 1 + numNodos t1 + numNodos t2
 
 
 {-
+  Función: numHojas
+  Descripción: Cuenta el número de hojas de un árbol binario
+  Uso: arbol_1
+-}
+
+numHojas :: Arbol a -> Int
+numHojas Vacio = 0
+numHojas (AB r Vacio Vacio) = 1
+numHojas (AB _ t1 t2) = numHojas t1 + numHojas t2
+
+
+{-
+  Función:numNodosInternos
+   Descripción: Cuenta los nodos internos de un árbol binario, es decir,
+                los nodos que tienen al menos un hijo. Las hojas no se cuentan.
+   Uso: numNodosInternos = 
+-}
+
+numNodosInternos :: Arbol a -> Int
+numNodosInternos (AB r Vacio Vacio) = 0
+numNodosInternos (AB _ t1 t2) = 1 + numNodosInternos t1 + numNodosInternos t2
+
+-- Propiedad
+
+propiedad_hojas_nodos :: Arbol a -> Bool
+propiedad_hojas_nodos (AB r t1 t2) = numHojas (AB r t1 t2) == numNodosInternos (AB r t1 t2) + 1
+
+
+
+{-
  Función:distMin
  Descripción:Calcuala la distancia mínima de un árbol binario.
  Uso: distMin  (AB 7 (AB 1 Vacio Vacio ) (AB 8 Vacio Vacio)) = 1
@@ -58,6 +88,13 @@ alturaAb :: Arbol a -> Int
 alturaAb  Vacio = 0
 alturaAb (AB r Vacio Vacio) = 1
 alturaAb (AB r t1 t2) =  1 + max (alturaAb t1) (alturaAb t2)
+
+
+-- Recorridos ---
+
+posOrden :: Arbol a -> [a]
+posOrden Vacio = []
+posOrden (AB r t1 t2) = (posOrden t1) ++ (posOrden t2) ++ [r]
 
 
 ------ Arboles Binarios de Busqueda (BST) ----------
@@ -98,10 +135,6 @@ elemArb x (AB r t1 t2)
 let elementos = [8,6,1,4,2,7,15]
 let arbol_elementos = foldr inserta Vacio elementos
 -} 
-
-
-
-
 
 {-
 Función: aABB
