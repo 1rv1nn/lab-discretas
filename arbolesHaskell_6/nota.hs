@@ -130,10 +130,12 @@ elemArb x (AB r t1 t2)
     | x > r = elemArb x t2
 
 
+{- foldr/foldl
 
-{- foldr
-let elementos = [8,6,1,4,2,7,15]
-let arbol_elementos = foldr inserta Vacio elementos
+let elementos = [8,6,1,4,12,7,15,9,3]
+let arbol_elementos_r = foldr inserta Vacio elementos
+
+arbol_elementos_l = foldl (flip inserta) Vacio elementos
 -} 
 
 {-
