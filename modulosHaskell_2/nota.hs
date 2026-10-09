@@ -1,3 +1,4 @@
+import Cuadrado
 
 {- Función: leap
    Descripción: Determina si un año es biciesto o no
@@ -34,6 +35,18 @@ persona :: (String, Int, String) -> String
 persona (nombre, edad, residencia) = nombre ++ " tiene " ++ show edad ++ " anios y reside en " ++ residencia
 
 
+
+{- Función: sumCuadrados
+   Descripción: Toma tres números y regresa la suma de los cuadrados de los dos números más grandes.
+   Uso: sumSqrt 4 2 6 = 52 
+-}
+
+sumSqrt x y z =
+  if x <= y && x <= z 
+  then cuadrado y + cuadrado z
+  else if y <= x && y <= z
+       then cuadrado x + cuadrado z
+       else cuadrado x + cuadrado y
 
 
 
