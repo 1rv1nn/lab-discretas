@@ -62,15 +62,18 @@ Una vez que un valor se establece en datos (variable), será exactamente así pa
       ejemplo :: Int
       ejemplo = 
           let x = 45
-              y = x + 5   -- y usa x₁ = 45
-          in let x = 51   -- Nueva x₂
-                 z = x + 5  -- z usa x₂ = 51
-              in y + z      -- y=50, z=56
+              y = x + 5   
+          in let x = 51   
+                 z = x + 5  
+              in y + z      
 
         -- Resultado: 106
         -- y usa x₁=45 (no cambió)
         -- z usa x₂=51 (nueva variable)
 
+En `let x = 51` no se está mutando ni modificando la variable `x` anterior en su posición original de memoria. En Haskell las variables son inmutables. Lo que hace GHCi es crear un nuevo enlace (shadowing) que sombrea o enmascara al `x` anterior. A partir de aquí, cualquier referencia nueva a `x` usará `51`.
+
+Si Haskell fuera un lenguaje mutable tradicional, al cambiar el valor de `x` a `51`, es posible que las variables que dependían de él se hubieran actualizado dinámicamente. Sin embargo, aquí y conservó su valor original (50) porque la celda o vínculo con el que se calculó era inmutable y no se vio afectado por la nueva declaración de x.
 
 
 ### Tambien Haskell es compilado.
