@@ -65,6 +65,19 @@ esParBool x =
 
 
 
+{-
+Guardas. Expresiones condicionales basadas en if-then-else que facilita la lectura, 
+escritura o comprensión del código (Azúcar sintáctica)
+-}
+
+describeAge :: Int -> String
+describeAge age
+  | age < 13    = "Child"
+  | age < 20    = "Teenager"
+  | age < 65    = "Adult"
+  | otherwise   = "Senior"
+
+
 -- Para compilar  este archivo descomenta las siguientes lineas:
 
 {-
