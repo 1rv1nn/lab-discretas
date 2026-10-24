@@ -17,3 +17,5 @@ Te invito a que juegues con las funciones, crea una nueva rama nombrandola con l
 https://learnyouahaskell.github.io/
 
 - Haskell.org. (2014). Learn Haskell in Y minutes. Learn X in Y Minutes. https://learnxinyminutes.com/docs/haskell/
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/1rv1nn/lab-discretas)
